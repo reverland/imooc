@@ -4,15 +4,20 @@
   "description": "imooc movie",
   "main": "app.js",
   "dependencies": {
+    "bcrypt": "^0.8.5",
     "body-parser": "^1.13.3",
     "bower": "^1.4.1",
     "express": "^4.13.3",
     "jade": "^1.11.0",
+    "moment": "^2.10.6",
     "mongoose": "^4.1.2",
-    "underscore": "^1.8.3",
-    "moment": "^2.10.6"
+    "underscore": "^1.8.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt-concurrent": "^2.0.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-nodemon": "^0.4.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,0 +1,94 @@
+2015-08-14T19:33:12.400+0800 [initandlisten] MongoDB starting : pid=2849 port=27017 dbpath=data 64-bit host=gentoo
+2015-08-14T19:33:12.400+0800 [initandlisten] db version v2.6.8
+2015-08-14T19:33:12.400+0800 [initandlisten] git version: nogitversion
+2015-08-14T19:33:12.400+0800 [initandlisten] OpenSSL version: OpenSSL 1.0.1k 8 Jan 2015
+2015-08-14T19:33:12.400+0800 [initandlisten] build info: Linux gentoo 3.17.7-gentoo #1 SMP Tue Jan 20 17:59:08 CST 2015 x86_64 BOOST_LIB_VERSION=1_52
+2015-08-14T19:33:12.400+0800 [initandlisten] allocator: tcmalloc
+2015-08-14T19:33:12.400+0800 [initandlisten] options: { config: "conf/mongod.conf", storage: { dbPath: "data" }, systemLog: { destination: "file", path: "log/mongod.log" } }
+2015-08-14T19:33:12.455+0800 [initandlisten] journal dir=data/journal
+2015-08-14T19:33:12.455+0800 [initandlisten] recover : no journal files present, no recovery needed
+2015-08-14T19:33:12.831+0800 [initandlisten] waiting for connections on port 27017
+2015-08-14T19:33:21.360+0800 [initandlisten] connection accepted from 127.0.0.1:55546 #1 (1 connection now open)
+2015-08-14T19:33:21.361+0800 [initandlisten] connection accepted from 127.0.0.1:55547 #2 (2 connections now open)
+2015-08-14T19:33:21.362+0800 [initandlisten] connection accepted from 127.0.0.1:55548 #3 (3 connections now open)
+2015-08-14T19:33:21.362+0800 [initandlisten] connection accepted from 127.0.0.1:55549 #4 (4 connections now open)
+2015-08-14T19:33:21.363+0800 [initandlisten] connection accepted from 127.0.0.1:55550 #5 (5 connections now open)
+2015-08-14T19:34:12.791+0800 [clientcursormon] mem (MB) res:57 virt:539
+2015-08-14T19:34:12.791+0800 [clientcursormon]  mapped (incl journal view):320
+2015-08-14T19:34:12.791+0800 [clientcursormon]  connections:5
+2015-08-14T19:34:15.175+0800 [conn1] end connection 127.0.0.1:55546 (4 connections now open)
+2015-08-14T19:34:15.175+0800 [conn4] end connection 127.0.0.1:55549 (3 connections now open)
+2015-08-14T19:34:15.176+0800 [conn5] end connection 127.0.0.1:55550 (2 connections now open)
+2015-08-14T19:34:15.176+0800 [conn3] end connection 127.0.0.1:55548 (1 connection now open)
+2015-08-14T19:34:15.177+0800 [conn2] end connection 127.0.0.1:55547 (0 connections now open)
+2015-08-14T19:34:16.356+0800 [initandlisten] connection accepted from 127.0.0.1:55567 #6 (1 connection now open)
+2015-08-14T19:34:16.357+0800 [initandlisten] connection accepted from 127.0.0.1:55568 #7 (2 connections now open)
+2015-08-14T19:34:16.358+0800 [initandlisten] connection accepted from 127.0.0.1:55569 #8 (3 connections now open)
+2015-08-14T19:34:16.359+0800 [initandlisten] connection accepted from 127.0.0.1:55570 #9 (4 connections now open)
+2015-08-14T19:34:16.359+0800 [initandlisten] connection accepted from 127.0.0.1:55571 #10 (5 connections now open)
+2015-08-14T19:35:44.667+0800 [conn6] end connection 127.0.0.1:55567 (4 connections now open)
+2015-08-14T19:35:44.667+0800 [conn8] end connection 127.0.0.1:55569 (4 connections now open)
+2015-08-14T19:35:44.667+0800 [conn7] end connection 127.0.0.1:55568 (4 connections now open)
+2015-08-14T19:35:44.667+0800 [conn9] end connection 127.0.0.1:55570 (1 connection now open)
+2015-08-14T19:35:44.668+0800 [conn10] end connection 127.0.0.1:55571 (0 connections now open)
+2015-08-14T19:35:45.760+0800 [initandlisten] connection accepted from 127.0.0.1:55593 #11 (1 connection now open)
+2015-08-14T19:35:45.761+0800 [initandlisten] connection accepted from 127.0.0.1:55594 #12 (2 connections now open)
+2015-08-14T19:35:45.762+0800 [initandlisten] connection accepted from 127.0.0.1:55595 #13 (3 connections now open)
+2015-08-14T19:35:45.763+0800 [initandlisten] connection accepted from 127.0.0.1:55596 #14 (4 connections now open)
+2015-08-14T19:35:45.763+0800 [initandlisten] connection accepted from 127.0.0.1:55597 #15 (5 connections now open)
+2015-08-14T19:37:58.188+0800 [conn13] end connection 127.0.0.1:55595 (4 connections now open)
+2015-08-14T19:37:58.188+0800 [conn14] end connection 127.0.0.1:55596 (4 connections now open)
+2015-08-14T19:37:58.188+0800 [conn15] end connection 127.0.0.1:55597 (4 connections now open)
+2015-08-14T19:37:58.188+0800 [conn12] end connection 127.0.0.1:55594 (1 connection now open)
+2015-08-14T19:37:58.188+0800 [conn11] end connection 127.0.0.1:55593 (4 connections now open)
+2015-08-14T19:37:59.221+0800 [initandlisten] connection accepted from 127.0.0.1:55626 #16 (1 connection now open)
+2015-08-14T19:37:59.222+0800 [initandlisten] connection accepted from 127.0.0.1:55627 #17 (2 connections now open)
+2015-08-14T19:37:59.223+0800 [initandlisten] connection accepted from 127.0.0.1:55628 #18 (3 connections now open)
+2015-08-14T19:37:59.223+0800 [initandlisten] connection accepted from 127.0.0.1:55629 #19 (4 connections now open)
+2015-08-14T19:37:59.223+0800 [initandlisten] connection accepted from 127.0.0.1:55630 #20 (5 connections now open)
+2015-08-14T19:39:12.805+0800 [clientcursormon] mem (MB) res:58 virt:539
+2015-08-14T19:39:12.805+0800 [clientcursormon]  mapped (incl journal view):320
+2015-08-14T19:39:12.805+0800 [clientcursormon]  connections:5
+2015-08-14T19:40:13.362+0800 [TTLMonitor] query imooc.system.indexes query: { expireAfterSeconds: { $exists: true } } planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:1 nscannedObjects:1 keyUpdates:0 numYields:1 locks(micros) r:1113907 nreturned:0 reslen:20 571ms
+2015-08-14T19:44:12.819+0800 [clientcursormon] mem (MB) res:58 virt:539
+2015-08-14T19:44:12.819+0800 [clientcursormon]  mapped (incl journal view):320
+2015-08-14T19:44:12.819+0800 [clientcursormon]  connections:5
+2015-08-14T19:46:30.477+0800 [conn17] end connection 127.0.0.1:55627 (4 connections now open)
+2015-08-14T19:46:30.477+0800 [conn19] end connection 127.0.0.1:55629 (4 connections now open)
+2015-08-14T19:46:30.477+0800 [conn20] end connection 127.0.0.1:55630 (4 connections now open)
+2015-08-14T19:46:30.477+0800 [conn18] end connection 127.0.0.1:55628 (4 connections now open)
+2015-08-14T19:46:30.477+0800 [conn16] end connection 127.0.0.1:55626 (4 connections now open)
+2015-08-14T19:46:31.669+0800 [initandlisten] connection accepted from 127.0.0.1:55898 #21 (1 connection now open)
+2015-08-14T19:46:31.670+0800 [initandlisten] connection accepted from 127.0.0.1:55899 #22 (2 connections now open)
+2015-08-14T19:46:31.671+0800 [initandlisten] connection accepted from 127.0.0.1:55900 #23 (3 connections now open)
+2015-08-14T19:46:31.671+0800 [initandlisten] connection accepted from 127.0.0.1:55901 #24 (4 connections now open)
+2015-08-14T19:46:31.672+0800 [initandlisten] connection accepted from 127.0.0.1:55902 #25 (5 connections now open)
+2015-08-14T19:47:39.889+0800 [conn22] end connection 127.0.0.1:55899 (4 connections now open)
+2015-08-14T19:47:39.890+0800 [conn25] end connection 127.0.0.1:55902 (3 connections now open)
+2015-08-14T19:47:39.890+0800 [conn23] end connection 127.0.0.1:55900 (2 connections now open)
+2015-08-14T19:47:39.890+0800 [conn24] end connection 127.0.0.1:55901 (1 connection now open)
+2015-08-14T19:47:39.890+0800 [conn21] end connection 127.0.0.1:55898 (0 connections now open)
+2015-08-14T19:49:12.833+0800 [clientcursormon] mem (MB) res:42 virt:539
+2015-08-14T19:49:12.833+0800 [clientcursormon]  mapped (incl journal view):320
+2015-08-14T19:49:12.833+0800 [clientcursormon]  connections:0
+2015-08-14T19:54:12.846+0800 [clientcursormon] mem (MB) res:42 virt:539
+2015-08-14T19:54:12.846+0800 [clientcursormon]  mapped (incl journal view):320
+2015-08-14T19:54:12.846+0800 [clientcursormon]  connections:0
+2015-08-14T19:55:01.373+0800 [signalProcessingThread] got signal 2 (Interrupt), will terminate after current cmd ends
+2015-08-14T19:55:01.373+0800 [signalProcessingThread] now exiting
+2015-08-14T19:55:01.373+0800 [signalProcessingThread] dbexit: 
+2015-08-14T19:55:01.373+0800 [signalProcessingThread] shutdown: going to close listening sockets...
+2015-08-14T19:55:01.373+0800 [signalProcessingThread] closing listening socket: 8
+2015-08-14T19:55:01.373+0800 [signalProcessingThread] closing listening socket: 10
+2015-08-14T19:55:01.373+0800 [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2015-08-14T19:55:01.373+0800 [signalProcessingThread] shutdown: going to flush diaglog...
+2015-08-14T19:55:01.373+0800 [signalProcessingThread] shutdown: going to close sockets...
+2015-08-14T19:55:01.373+0800 [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-08-14T19:55:01.373+0800 [signalProcessingThread] shutdown: lock for final commit...
+2015-08-14T19:55:01.373+0800 [signalProcessingThread] shutdown: final commit...
+2015-08-14T19:55:01.374+0800 [signalProcessingThread] shutdown: closing all files...
+2015-08-14T19:55:01.374+0800 [signalProcessingThread] closeAllFiles() finished
+2015-08-14T19:55:01.374+0800 [signalProcessingThread] journalCleanup...
+2015-08-14T19:55:01.374+0800 [signalProcessingThread] removeJournalFiles
+2015-08-14T19:55:01.455+0800 [signalProcessingThread] shutdown: removing fs lock...
+2015-08-14T19:55:01.455+0800 [signalProcessingThread] dbexit: really exiting now

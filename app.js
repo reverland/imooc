@@ -1,13 +1,17 @@
-var express = require('express')
+var express = require('express');
 var bodyParser = require('body-parser')
 var path = require('path')
+var moment = require('moment');
 var _ = require('underscore')
 var mongoose = require('mongoose')
 var Movie = require('./models/movie')
+var User = require('./models/user')
 var port = process.env.PORT || 3000
 var app = express()
 
 mongoose.connect('mongodb://localhost/imooc')
+
+app.locals.moment = moment;
 
 app.set('views', './views/pages')
 app.set('view engine', 'jade')
@@ -31,22 +35,94 @@ app.get('/', function(req, res) {
     })
 })
 
+// signup
+
+app.post('/user/signup', function(req, res) {
+    var _user = req.body.user
+
+    User.findOne({name: _user.name}, function(err, user) {
+        if(err) {
+            console.log(err)
+        }
+        if (user) {
+            console.log(user)
+            return res.redirect('/')
+        } else {
+            var user = new User(_user);
+            user.save(function(err, user) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    res.redirect('/userlist');
+                }
+            })
+        }
+    })
+})
+// req.param('user'))
+// param->query->body
+//
+app.post('/user/signin', function(req, res) {
+     var _user = req.body.user;
+     var name = _user.name;
+     var password = _user.password;
+
+     User.findOne({name: name}, function(err, user) {
+         if(err) {
+             console.log(err);
+         }
+         if(!user) {
+             return res.redirect('/');
+         }
+
+         user.comparePassword(password, function(err, isMatch) {
+             if(err){
+                 console.log(err);
+             }
+             if(isMatch) {
+                 console.log('Password is matched')
+                 return res.redirect('/');
+             } else {
+                 console.log('Password is not matched')
+             }
+         })
+     })
+})
+
+// userlist
+app.get('/userlist', function(req, res) {
+    User.fetch(function(err, users){
+        if (err){
+            console.log(err)
+        }
+        res.render('userlist', {
+            title: 'imooc 列表页',
+            users: users
+        })
+    })
+})
+// detail page
+
 app.get('/movie/:id', function(req, res) {
     var id = req.params.id
 
     // 我不知道为什么，不能用字符串搜索而必须用ObjectId
     // 所以我还是用一种奇葩的方式搞定了。。。
     Movie.findById(mongoose.Schema.ObjectId(id), function(err, movie){
-        res.render('detail', {
-            title: 'imooc ' + movie.title,
-            movie: movie
-        })
+        if(movie){
+            res.render('detail', {
+                title: 'imooc ' + movie.title,
+                movie: movie
+            })
+        } else {
+            res.redirect('/');
+        }
     })
 })
 
 app.get('/admin/movie', function(req, res) {
     res.render('admin', {
-        title: 'imooc 后台页',
+        title: 'imooc 后台页面',
         movie: {
             doctor: '',
             country: '',
@@ -133,14 +209,14 @@ app.get('/admin/list', function(req, res) {
 
 // list delete movie
 app.delete('/admin/list', function(req, res) {
-     var id = req.query.id
-     //console.log(id)
-     if(id) {
-         Movie.remove({_id: mongoose.Schema.ObjectId(id)}, function(err, movie){
-             if(err) {
-                  console.log(err)
-             }
-             res.json({success: 1})
-         })
-     }
+    var id = req.query.id
+    //console.log(id)
+    if(id) {
+        Movie.remove({_id: mongoose.Schema.ObjectId(id)}, function(err, movie){
+            if(err) {
+                console.log(err)
+            }
+            res.json({success: 1})
+        })
+    }
 })
